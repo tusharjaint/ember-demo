@@ -1,0 +1,38 @@
+.emailError{
+	color: red;
+}
+.outerDivUl{
+
+}
+.ul{
+	padding: 15px 25px;
+	list-style-type: none;
+	width: 320px;
+}
+.ul .li{
+	height: 50px;
+}
+.ul .li .img{
+	width:40px;
+	height:40px;
+	margin: 5px;
+	float:left;
+	background:orange;
+}
+.ul .li .name{
+	float: left;
+	width: calc(100% - 50px);
+	padding-top: 5px;
+	font-weight: bold;
+}
+.ul .li .sub-name{
+	float: left;
+	width: calc(100% - 50px);
+	color: gray;
+}
+.ul .li:hover{
+	background-color: lightgray;
+	cursor: pointer;
+}
+
+

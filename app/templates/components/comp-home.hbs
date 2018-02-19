@@ -1,0 +1,41 @@
+<br>
+Please enter email address
+{{input value=email type="email" insert-newline="submitClick"}}
+<button {{action 'submitClick'}}>Submit</button>
+
+{{#if emailError}}
+<div class="emailError">{{emailError}}</div>
+{{/if}}
+
+{{#if result}}
+<p>Your email is : {{resultEmail}}</p>
+<br>
+Data fount related to your email is as following.
+<div class="outerDivUl">
+	<ul class="ul"> 
+		{{#each result as |item|}}
+			<li class="li">
+				<img class="img" src={{item.imageUrl}} alt="No Image">
+				<div class="name">{{item.firstName}} {{item.lastName}}</div>
+				<div class="sub-name">{{item.emailId}}</div>
+			</li>
+		{{else}}
+			<span>No data found</span>
+		{{/each}}
+	</ul>
+</div>
+{{/if}}
+
+<!--
+	{{#each model.selectedGroup.commands as |item|}}
+	<i {{action 'onActionCommand' item}} class="fa  {{item.icon}} fa-lg fa-fw font-icon-color" aria-hidden="true" style="padding-left: 5px;" title={{item.name}}></i>
+	{{/each}}
+
+	import groupsvm from '../models/groupsvm';
+
+	response.data.forEach(function(item){
+		var obj = groupsvm.create();
+		obj.setVoObject(groupsvo.create(item));
+		applicationVm.groups.pushObject(obj);
+	});		
+-->
